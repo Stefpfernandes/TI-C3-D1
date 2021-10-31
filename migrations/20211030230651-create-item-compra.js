@@ -1,0 +1,50 @@
+'use strict';
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.createTable('ItemCompras', {
+      CompraId: {
+        allowNull: false,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'compras',
+          key: 'id'
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      },
+      ProdutoId: {
+        allowNull: false,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'produtos',
+          key: 'id'
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      },
+      quantidade: {
+        type: Sequelize.INTEGER
+      },
+      valor: {
+        type: Sequelize.FLOAT
+      },
+      At: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      }      
+    });
+  },
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.dropTable('ItemCompras');
+  }
+};
