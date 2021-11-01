@@ -37,7 +37,7 @@ app.post('/servicos', async(req, res) =>{
     }).catch(function(erro){
         return res.status(400).json({
             error: true,
-            message: "Não foi possível estabelecer conexão"
+            messega: "erro: " + erro
         })
     });   
 
@@ -55,7 +55,7 @@ app.post('/clientes', async(req, res) =>{
     }).catch(function(erro){
         return res.status(400).json({
             error: true,
-            message: "Não foi possível estabelecer conexão"
+            messega: "erro: " + erro
             })
         });   
     });
@@ -75,7 +75,7 @@ app.post('/pedidos', async(req, res) =>{
     }).catch(function(erro){
         return res.status(400).json({
             error: true,
-            message: "Não foi possível estabelecer conexão"
+            messega: "erro: " + erro
         })
     });   
 });
@@ -94,7 +94,7 @@ app.post('/itenspedido', async(req, res) =>{
     }).catch(function(erro){
         return res.status(400).json({
             error: true,
-            message: "Não foi possível estabelecer conexão"
+            messega: "erro: " + erro
         })
     });   
 });
@@ -128,7 +128,7 @@ app.post('/compras', async(req, res) =>{
     }).catch(function(erro){
         return res.status(400).json({
             error: true,
-            message: "Não foi possível estabelecer conexão"
+            messega: "erro: " + erro
         })
     });   
 });
@@ -147,7 +147,7 @@ app.post('/itenscompra', async(req, res) =>{
     }).catch(function(erro){
         return res.status(400).json({
             error: true,
-            message: "Não foi possível estabelecer conexão"
+            messega: "erro: " + erro
         })
     });   
 });
@@ -166,7 +166,7 @@ app.post('/produtos', async(req, res) =>{
     }).catch(function(erro){
         return res.status(400).json({
             error: true,
-            message: "Não foi possível estabelecer conexão"
+            messega: "erro: " + erro
         })
     });   
 });
@@ -187,7 +187,7 @@ app.get('/servico/:id', async(req, res) => {
     }).catch(function(erro){
         return res.status(400).json({
             error: true,
-            message: "Não foi possível estabelecer conexão"
+            messega: "erro: " + erro
         });
     });
 });
