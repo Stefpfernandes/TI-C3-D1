@@ -1,1 +1,5 @@
-# TI-C3-D1
+# TI-Academy | Ciclo 3 | Desafio 1
+
+---------------------------------------
+
+Back-end (NODE.JS)
